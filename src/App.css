@@ -37,6 +37,14 @@ body {
   margin-right: 50px;
 }
 
+.navbar .appName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 250px;
+  color: white;
+}
+
 .user p {
   font-size: 15px;
   margin-right: 10px;

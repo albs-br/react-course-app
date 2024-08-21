@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { auth } from "../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
+import packageObj from "../../package.json"
 
 export const Navbar = () => {
     const [ user ] = useAuthState(auth);
@@ -13,6 +14,10 @@ export const Navbar = () => {
     return (
         <div className="navbar">
             
+            <div className="appName">
+                {packageObj.name} version: {packageObj.version}
+            </div>
+
             <div className="links">
                 <Link to="/">Main</Link>
                 {!user ? (

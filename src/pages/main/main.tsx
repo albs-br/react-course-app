@@ -28,6 +28,6 @@ export const Main = () => {
     
 
     return <div>
-            { postsList?.map((post) => <Post post={post} />)}
+            { postsList?.map((post) => <Post post={post} key={post.id} />)}
         </div>;
 };
